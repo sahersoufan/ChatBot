@@ -1,0 +1,577 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - subject_discipline_inquiry
+  - objective_discipline
+  - academic_student_rights
+  - Nacademic_student_rights
+  - academic_student_duties
+  - Nacademic_student_duties
+  - student_admission_system
+  - admission_requirements
+  - study_System_exam
+  - major_transfer
+  - attention_excuse
+  - academic_warning
+  - preparatory_year
+  - choose_academic_programs
+  - depriving_student
+  - withdraw_first_semester
+  - dismissing_preparatory_year
+  - additional_opportunity_preparatory_year
+  - transfer_preparatory_year
+  - student_activities_list
+  - objective_student_activities_list
+  - student_club_creation
+  - student_club_members
+  - student_club_branches
+  - club_member_job
+  - self_employed_student_commitment
+  - self_employed_student_rewards
+  - self_employed_student_fee_reduction
+  - self_employed_student_living_discounts
+  - self_employed_student_fee_include
+  - self_employed_student_admission_fall
+  - student_housing
+  - student_housing_distribution
+  - student_housing_eviction
+  - student_housing_holidays
+  - student_housing_forbidden
+  - student_housing_violation
+  - student_housing_exempted
+  
+
+
+
+slots:
+ language:
+    type: text
+    initial_value: 'en'
+    mappings:
+    - type: custom
+
+responses:
+  utter_greet:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "اهلا و سهلا"
+
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "اهلا بك"
+
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "من الرائع رؤيتك مجددا"
+
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "اهلا يا صديقي"
+
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "اهلا كيف الحال"
+
+   - text: "Hey! How are you?"
+   - text: "Hey"
+   - text: "Hey my friend"
+
+  utter_cheer_up:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "هنا شيء ليفرحك قليلا:"
+     image: "https://i.imgur.com/nGF1K8f.jpg"
+
+   - text: "Here is something to cheer you up:"
+     image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: هل ساعدك ذلك؟"
+
+   - text: "Did that help you?"
+
+  utter_happy:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "رائع، استمر!"
+
+   - text: "Great, carry on!"
+
+  utter_goodbye:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "مع السلامة"
+
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "وداعا"
+
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "اراك لاحقا"
+
+
+   - text: "Bye"
+   - text: "see you"
+   - text: "be good until the next time"
+
+  utter_iamabot:
+   - text: "I am a bot, powered by Rasa."
+
+
+
+
+# my response
+
+#######################discipline###########################
+
+
+  utter_subject_discipline_inquiry:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يخضع لاحكام هذي اللائحه كل طالب مقيد للدراسه بالكليه او المعهد والملتحقين ببرامج التدريب والدورات.
+لايجوز للطالب ان يحتج بالجهل او بعدم العلم بانظمة الكلية او المعهد ولوائحها وقراراتها , وعلى الكلية او المعهد نشر هذه اللائحة واعلانها للطلاب بكافة وسائل الاعلان المعترف بها في الكلية او المعهد .
+"
+   - text: "Subject to the provisions of this regulation, every student registered to study at a college or institute and enrolled in training programs and courses.
+The institute, its regulations and data, and the college the American University in Cairo.
+"
+
+
+  utter_objective_discipline:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "من اهداف هذه اللائحه :
+ضمان جودة العمليه التعليميه والانشطة المساندة لها بالكلية او المعهد .
+ضبط سلوك الطلاب ليكونو اعضاء فاعلين في مجتمعاتهم .
+"
+   - text: "Among the objectives of this regulation:
+Ensuring the quality of the educational process and its supporting activities in the college or institute.
+Regulating students' behavior.
+"
+
+#######################Students rights and duties###########################
+
+  utter_academic_student_rights:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "حقوق الطالب في المجال الاكادمي :
+- تهيئة البيئه المناسبه للتعليم والتعلم.
+- اشعار الطالب بأي قرار يتخذ في حقه، و إعطائه فرصة لدفاع عن نفسه.
+- التحويل من تخصص الى اخر حسب الانظمه الخاصه بالتحويل.
+- الاطلاع على الخطط و مفردات المقررات والجداول الدراسيه.
+"
+   - text: "Student rights in the academic field
+- Creating a suitable environment for teaching and learning.
+- Notifying the student of any decision taken against him, and giving him an opportunity to defend himself.
+- Transferring from one specialty to another according to the transfer regulations.
+- Viewing plans, course vocabulary and study schedules.
+"
+
+  utter_Nacademic_student_rights:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "حقوق الطلبه في المجال غير الاكاديمي:
+- توفير الرعاية الصحيه الكافيه له في عيادات و مستشفيات الهيئه الملكيه.
+- الحق في التصويت لترشيح اعضاء المجلس الطلابي.
+- الاطلاع على ما يستجد من لوائح وتعليمات.
+"
+   - text: "The rights of students in the non-academic field:
+- Providing him with adequate health care in the clinics and hospitals of the Royal Commission.
+- The right to vote to nominate student council members.
+- See the latest regulations and instructions.
+"
+
+  utter_academic_student_duties:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "واجبات الطالب :
+- الالتزام بما تنص عليه اللوائح و انظمة الكليه / المعهد.
+- حضور يوم التعريف بالكليه / المعهد واقسامها العلميه.
+- مراعاة اداب الاستفاده من المحاضرات و المحافظه على وقتها.
+"
+
+   - text: "Student's duties:
+- Compliance with what is stipulated in the college/institute bylaws and regulations.
+- Attending the introduction day of the college / institute and its scientific departments.
+- Observe the etiquette of benefiting from lectures and maintaining their time.
+"
+
+  utter_Nacademic_student_duties:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "واجبات الطالب في المجال غير الاكاديمي :
+- عدم اثارة القلق و الازعاج او التجمعات غير المشروعه.
+- عدم اطالة الشعر او القيام بعمل قصات غير لائقه.
+- المحافظه على النظافه العامه داخل مرافق الكليه / المعهد.
+"
+
+   - text: "Student duties in the non-academic field:
+- Not to cause anxiety, disturbance or illegal gatherings.
+- Not to lengthen the hair or do inappropriate haircuts.
+- Maintaining public cleanliness within the facilities of the college / institute.
+"
+
+######################Study and tests############################
+
+  utter_student_admission_system:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "نظام قبول الطلاب:
+يحدد مجلس الكليات والمعاهد عدد الطلاب الذين سيتم قبولهم.
+"
+   - text: "Student Admission System:
+The Council of Colleges and Institutes determines the number of students to be accepted.
+"
+
+  utter_admission_requirements:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "شروط القبول:
+سعودي الجنسيه ، حاصل على شهادة الثانويه عن مده لا تزيد عن خمسة سنوات وبتقدير جيد كحد ادنى ، خاض لاختبار القدرات والتحصيلي ، شهادة الكشف الطبي ، متفرغاً لدراسه ، لا يكون قد فصل من قبل لتأديب.
+"
+   - text: "Admission requirements:
+A Saudi national, holder of a secondary school certificate for a period not exceeding 5 years and with a grade of good as a minimum, he has taken the ability and achievement test, medical examination certificate, full-time to study, and he has not been previously dismissed for discipline.
+"
+
+  utter_study_System_exam:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "نظام الدراسه والاختبارات:
+توافق الكليه على الطالب الزائر اذا كان دارس في جامعه او كليه معترف بها  ، ان تكون الدراسه السابقه له باللغه الانجليزيه.
+"
+   - text: "Study system and exams:
+The college approves of the visiting student if he is studying at an accredited university or college, that his previous study was in the English language.
+"
+
+  utter_major_transfer:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "تحويل التخصص:
+يجوز للطالب التحويل من تخصص لاخر قبل انهائه المستوى الرابع ، يسمح به مره واحده.
+"
+   - text: "Major Transfer:
+A student may transfer from one major to another before completing the fourth level, which is allowed only once.
+"
+
+  utter_attention_excuse:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "المواظبه والاعذار :
+يحرم الطالب من المقرر اذا زاد معدل الغياب عن (١٥٪) ويحتسب صفر ماعدا في حالات تستثنى كالتنويم و المرض المعدي وحالة وفاه إلى آخره.
+"
+   - text: "Attention and excuses:
+The student will be denied a course if the absence rate exceeds (15%) and it will be counted as zero, except in cases that are excluded, such as hypnosis, contagious disease, death, etc.
+"
+
+  utter_academic_warning:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "الانذار الاكاديمي:
+يعطى الطالب انذاراً اكاديمياً اذا قل معدله عن ٢،٠٠ من ٤ وقد ياخذ فرصه اضافيه في حال الموافقه.
+"
+   - text: "Academic warning:
+The student is given an academic probation if his GPA is less than 2.00 out of 4, and he may take an extra chance if approved.
+"
+
+######################Preparatory year and basic skills year############################
+
+  utter_preparatory_year:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "لا تحتسب مدة دراسة السنه التحضيريه ضمن المده المحدده لاكمال متطلبات الحصول على الدرجه العلميه."
+   - text: "The duration of the preparatory year study is not counted within the period specified for completing the requirements for obtaining the scientific degree."
+  
+  utter_choose_academic_programs:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يحق للطالب / المتدرب اختيار احد البرامج الاكاديميه / الفنيه في الكليه / المعهد بعد اجتياز متطلبات السنه التحضيريه / المهارات الاساسيه وتكون المفاضله بالمعدل التراكمي وحسب شروط كل جهه ، اذا كان عدد الطلاب اكثر من عدد المقاعد المتاحه."
+   - text: "The student/trainee has the right to choose one of the academic/technical programs in the college/institute after passing the preparatory year requirements/basic skills. The preference is based on the cumulative average and according to the conditions of each party, if the number of students is more than the number of available seats."
+
+  utter_depriving_student:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يحرم الطالب من اي مقرر دراسي اذا زادت مدة غيابه عن (١٥٪) ساعة"
+   - text: "The student will be deprived of any course if the period of absence exceeds (15%) an hour"
+
+  utter_withdraw_first_semester:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "لايجوز للطالب التاجيل او الانسحاب من الفصل الدراسي الاول له في الكليه او المعهد واذا اخلى طرفه من الكليه يلغى قبوله ويحق له التقديم كطالب مستجد عند فتح اباب القبول"
+   - text: "A student is not allowed to postpone or withdraw from his first semester at the college or institute."
+
+  utter_dismissing_preparatory_year:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يفصل الطالب اكاديمياً من السنه التحضيريه / المهارات الاساسيه ويطوى قيده من الكليه / المعهد في حال حصوله في السنه التحضيريه في جميع المقررات على تقدير DN. "
+   - text: "The student is academically dismissed from the preparatory year / basic skills, and he is dismissed from the college / institute in the event that in the preparatory year in all courses he receives a grade of DN."
+
+  utter_additional_opportunity_preparatory_year:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يجوز لطالب التقدم لفرصه اضافيه في السنه التحضيريه / المهارات الاساسيه في حال ان لا يكون قد حصل في الفصل الدراسي الذي فصل فيه على تقدير DN يستفاد من البرنامج مره واحده فقط."
+   - text: "A student may apply for an additional opportunity in the preparatory year / basic skills in the event that he did not obtain a DN rating in the semester in which he was dismissed, he can only benefit from the program once."
+
+  utter_transfer_preparatory_year:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "لا يقبل التحويل من خارج القطاع لمن لم يجتز السنه التحضيريه في الجامعه او الكليه السابقه"
+   - text: "Transfer from outside the sector is not accepted for those who did not pass the preparatory year at the previous university or college"
+
+######################List of student activities############################
+
+  utter_student_activities_list:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "تعد اندية النشاط الطلابي ملتقى مهما لاكتشاف وتطوير وتنمية المواهب الطلابية"
+   - text: "Student activity clubs are an important forum for discovering, developing and developing student talents"
+
+  utter_objective_student_activities_list:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "من اهدافه :غرس الدافع الذاتي للبذل والعطاء و اثراء حياة الطالب /الطالبه في الكلية وتزويد  الطالب بالمعارف والكفايات اللامنهجية المكمله للبرامج الدراسية"
+   - text: "Among its goals: instilling the self-motivation to give and give and enrich the student's life in the college and provide the student with extracurricular knowledge and competencies that complement the study programs"
+
+  utter_student_club_creation:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "حسنا, اولا يتم انشاء او تعليق  او دمج اندية النشاط الطلابي حسب الحاجة وبناءا على مرئيات الوكيل/رئيس قسم بقرار من مجلس الكلية/المعهد.
+ثانيا تتقدم الجهه التي ترغب في انشاء نادي طلابي لرئيس قسم خدمات الطلاب بخطة وتصور متكامل عن النادي المقترح واهدافه ومجالات نشاطه . 
+"
+   - text: "Well, first, student activity clubs are created, suspended or merged as needed and based on the views of the deputy/department head by a decision of the college/institute council.
+Secondly, the party wishing to establish a student club presents to the head of the Student Services Department a plan and an integrated vision of the proposed club, its objectives and areas of activity.
+"
+
+  utter_student_club_members:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يجب الا يقل اعضاء النادي المقترح عن خمسة اعضاء ومن ثم يتم تقديم بياناتهم لاخصائي النشاط "
+   - text: "The proposed club members must not be less than five members, and then their data is submitted to the activity specialist"
+
+  utter_student_club_branches:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يحق للنادي انشاء فروع له في الاقسام التعليمية بعد موافقة مدير الكلية"
+   - text: "The club has the right to establish branches in the educational departments after the approval of the college director"
+
+  utter_club_member_job:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "تتكون الاندية من (وكيل/ة رئيس قسم شؤون الطلاب ك رئيسا- رئيس/ة قسم الخدمات الطلابيه ك نائبا للرئيس ومقررا -مشرف/ة الانشطة الطلابية ك عضوا -اخصائي/ة الانشطة الطلابيه ك عضوا-رؤساء الاندية ك عضوا)"
+   - text: "The clubs consist of (the deputy head of the Student Affairs Department as a head - the head of the Student Services Department as a vice president and rapporteur - the student activities supervisor as a member - the student activities specialist as a member - the club heads as a member)"
+
+######################Self-employed students############################
+
+  utter_self_employed_student_commitment:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "على الدراسين على حسابهم الخاص جميع الانظمة و اللوائح  الخاصة بطلاب الانتظام . "
+   - text: "Students at their own expense must comply with all the rules and regulations for regular students."
+
+  utter_self_employed_student_rewards:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "لا يمنح الطالب مكافآت (شهرية،تفوق)"
+   - text: "The student is not given rewards (monthly, excel)"
+
+  utter_self_employed_student_fee_reduction:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يمكن للطلاب الدارسين على حسابهم الخاص الحصول على تخفيض الرسوم وفق لضوابط التالية:
+ان يكون الطالب سعودي الجنسية او من ام سعودية
+ان يجتاز كامل المقررات المستوى الاول للتخصص حسب الخطة الدراسية .
+ان يكون منتظما في الدراسة غير مفصول منها موقتا نهائيا 
+"
+   - text: "Students studying on their own account can obtain a fee reduction according to the following rules:
+The student must be a Saudi national or from a Saudi mother
+To pass all the courses of the first level of the specialization according to the study plan.
+To be regular in the study and not separated from it temporarily
+"
+
+  utter_self_employed_student_living_discounts:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يتم التعامل مع الطلاب في برنامج الطالب الذاتي مثل الطلاب الآخرين في الحصول على خصومات على بنود المعيشة. "
+   - text: "Students in the Student Self Program are treated like other students in getting discounts on living items."
+
+  utter_self_employed_student_fee_include:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يشمل الرسم الذي يدفعه الطالب استخدام جميع خدمات ومرافق الكلية / المعهد باستثناء العلاج والكتب المدرسية والزي الرسمي.  "
+   - text: "The fee paid by the student includes the use of all college/institute services and facilities except treatment, textbooks and uniforms."
+
+  utter_self_employed_student_admission_fall:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يسقط حق الطالب (الوافد) في القبول في الفصل الدراسي الأول إذا لم يكن قادراً على دفع الرسوم المطلوبة خلال المدة المحددة.  "
+   - text: "The right of the student (the expatriate) to be accepted in the first semester is forfeited if he is not able to pay the required fees within the specified period."
+
+######################Student accommodation############################
+
+  utter_student_housing:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يعد السكن الطلابي من الأقسام العاملة والتابعة للكلية ويخضع في إدارته وتسيير شؤونه الأنظمة الكلية المعهد ولوائحها."
+   - text: "The student housing is one of the working and affiliated departments of the college and is subject to the administration and management of its affairs by the college's college regulations and bylaws."
+
+  utter_student_housing_distribution:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يقوم قسم الإسكان بتوزيع الطلاب على شرف المباني السكنية حسب الشواغر السريرية"
+   - text: "The housing department distributes students to the honor of residential buildings according to clinical vacancies"
+
+  utter_student_housing_eviction:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "عند فصل الطالب أو انسحابه وعدم مراجعته لإخلاء طرفه من الكلية، يتم إخلاء سكنه غيابياً وإرسال ما وجد في غرفته من وثائق رسمية إلى وحدة الأمن والسلامة في الكلية. ولا يتحمل قسم إسكان الطلاب أي مسؤولية عن الأغراض الشخصية للطالب أو المفقودات أو التالف أو التعويض عنها."
+   - text: "When a student is expelled or withdraws and does not review to vacate his party from the college, his residence is evacuated in absentia and the official documents found in his room are sent to the Security and Safety Unit at the college. The Student Housing Department assumes no responsibility for, or compensation for, student personal items, lost or damaged items."
+
+  utter_student_housing_holidays:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يحق للطالب الساكن البقاء في السكن خلال العطل الرسمية و الإجازات، شريطة الحصول على موافقة رئيس قسم الإسكان بالكلية وتقديم مبررات مقبولة لدى قسم السكن وفق الضوابط"
+   - text: "The resident student has the right to stay in the residence during official holidays and vacations, provided that he obtains the approval of the head of the housing department at the college and submits justifications 
+acceptable to the housing department in accordance with the regulations
+"
+
+  utter_student_housing_forbidden:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يحظر على الطالب الساكن عليه الآتي
+ -حمل أو تخزين الأسلحة بكافة أنواعها، حتى وإن كانت مصرحة 
+ -تعاطي الكحول المسكرات والمخدرات والقدمين بجميع أنواعه
+ -استخدام المباخر والشموع داخل الغرف أو أي مرفق من مرافق السكن
+"
+   - text: "It is forbidden for the student to reside on the following:
+- Carrying or storing weapons of all kinds, even if authorized
+- Abuse of alcohol, drugs and feet of all kinds
+- Using incense burners and candles inside rooms or any housing facility
+"
+
+  utter_student_housing_violation:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "يعد مخالفة كل إخلال بالقوانين والأنظمة العامة وأحكام وتعاليم الشريعة الإسلامية، أو القيام بأي عمل محظور يحكم لائحة الانضباط أو غيرها من النظم واللوائح المعتمدة في الكلية "
+   - text: "Any violation of the general laws and regulations and the provisions and teachings of Islamic Sharia, or performing any prohibited act that governs the disciplinary regulations or other approved systems and regulations in the college is considered a violation."
+
+  utter_student_housing_exempted:
+   - condition:
+      - type: slot
+        name: language
+        value: "ar"
+     text: "لا يعفى الطالب من العقوبة بعدة عدم علمه بلائحة السكن الطلابي وما تصدره من تعليمات، وعلى قسم الإسكان نشر احكام هذه اللائحة وإعلام الطالب بشتى الوسائل المتاحة ."
+   - text: "The student is not exempted from punishment if he is not aware of the student housing regulations and the instructions issued by it. The housing department must publish the provisions of these regulations and inform the student of the various available means."
+
+
+##############
+
+actions:
+  - action_extract_slots
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

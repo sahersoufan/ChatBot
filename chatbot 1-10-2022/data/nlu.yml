@@ -1,0 +1,427 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - "مرحبا"
+    - "تحياتي"
+    - "صباح الخير"
+    - "مساء الخير"
+    - "اهلا"
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - "مع السلامة"
+    - "وداعا"
+    - "اراك لاحقا"
+    - "ليلة سعيدة"
+    - "الى اللقاء"
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - "نعم"
+    - "صحيح"
+    - "جيد"
+    - "حسننا"
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - "لا"
+    - "ليس كذلك"
+    - "خطأ"
+    - "كلا"
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - "رائع"
+    - "ممتاز"
+    - "جيد جدا"
+    - "انا رائع"
+    - "فرح"
+    - "مثالي"
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - "حزين"
+    - "سيء"
+    - "لست جيد"
+    - "غير سعيد"
+    - "حزن"
+    - "انا حزين"
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+# my intents
+
+#######################discipline###########################
+
+- intent: subject_discipline_inquiry
+  examples: |
+    - who is subject to the provision of the disciplinary regulation?
+    - "من يخضع لأحكام لائحة الانظباط؟"
+
+- intent: objective_discipline
+  examples: |
+    - what is the objectives of the discipline list?
+    - "ما هي أهداف لائحة الانظباط؟"
+
+#######################Students rights and duties###########################
+
+- intent: academic_student_rights
+  examples: |
+    - what are the rights of the student in the academic field?
+    - suitable environment
+    - notice of decisions
+    - switching between majors
+    - see study plans
+    - "ما هي حقوق الطالب في المجال الأكاديمي؟"
+    - "البيئة المناسبة"
+    - "الاشعار بالقرارات"
+    - "التحويل بين التخصصات"
+    - "الاطلاع على الخطط الدراسية"
+
+- intent: Nacademic_student_rights
+  examples: |
+    - what are the rights of students in the non-academic field?
+    - healthcare rights
+    - voting rights
+    - see the regulations
+    - "ما هي حقوق الطلبه في المجال غير الاكاديمي؟"
+    - "حقوق الرعاية الصحية"
+    - "حقوق التصويت"
+    - "الاطلاع على اللوائح"
+
+- intent: academic_student_duties
+  examples: |
+    - what are the duties of the students?
+    - duty systems
+    - bylaws and regulations of college or institute
+    - introduction day
+    - etiquette of lectures and time
+    - "ما هي واجبات الطلاب؟"
+    - "أنظمة الواجبات"
+    - "اللوائح وأنظمة الكليه أو المعهد"
+    - "يوم التعريف"
+    - "آداب المحاضرات والوقت"
+
+- intent: Nacademic_student_duties
+  examples: |
+    - what are the duties of students in the non-academic field?
+    - gatherings
+    - hair extension
+    - hair cut
+    - maintain hygiene
+    - "ما هي واجبات الطلاب فب المجال غير الاكاديمي؟"
+    - "التجمعات"
+    - "اطالة الشعر"
+    - "قص الشعر"
+    - "المحافظة على النظافة"
+
+######################Study and tests############################
+
+- intent: student_admission_system
+  examples: |
+    - student admission system
+    - how many students will be accepted
+    - "نظام قبول الطلاب"
+    - "عدد الطلاب الذين سيتم قبولهم"
+
+- intent: admission_requirements
+  examples: |
+    - "شروط القبول"
+    - "مواصفات قبول الطالب"
+    - "قبول الطلاب"
+    - admission requirements
+    - student admission requirements
+    - student admission
+
+- intent: study_System_exam
+  examples: |
+    - "نظام الدراسة والاختبارات"
+    - study system and tests
+
+- intent: major_transfer
+  examples: |
+    - "تحويل التخصص"
+    - "التحويل من تخصص لاخر"
+    - transferring specialization
+    - transferring from one specialty to another
+
+- intent: attention_excuse
+  examples: |
+    - "المواظبة والاعذار"
+    - "معدل الغياب"
+    - "الغياب بسبب المرض أو الوفاة"
+    - perseverance and excuses
+    - absenteeism rate
+    - absence due to illness or death
+
+- intent: academic_warning
+  examples: |
+    - "الانذار الاكاديمي"
+    - "متى يأخذ الطالب فرصة إضافية"
+    - academic warning
+    - when does a student take an extra chance
+
+######################Preparatory year and basic skills year############################
+
+- intent: preparatory_year
+  examples: |
+    - "السنة التحضيرية"
+    - preparatory Year
+
+- intent: choose_academic_programs
+  examples: |
+    - "هل يحق للطالب اختيار احد البرامج الاكاديمية او الفنية؟"
+    - "ماذا يحق للطالب بعد السنة التحضيرية؟"
+    - "بعد السنة التحضيرية"
+    - does the student have the right to choose one of the academic or technical programs?
+    - what is the student entitled to after passing the preparatory year?
+    - after the preparatory year
+
+- intent: depriving_student
+  examples: |
+    - "متى يحرم الطالب من مقرر دراسي؟"
+    - "الحرمان بسبب الغياب"
+    - when is a student deprived of a course?
+    - denial due to absence
+
+- intent: withdraw_first_semester
+  examples: |
+    - "متى يحق للطالب التأجيل أو الانسحاب؟"
+    - "الانسحاب من الفصل الدراسية الاول"
+    - when is the student entitled to postpone or withdraw?
+    - withdrawing from the first semester
+
+- intent: dismissing_preparatory_year
+  examples: |
+    - "متى يفصل الطالب من السنة التحضيرية؟"
+    - "متى يطوى قيد الطالب من الكلية او المعهد؟"
+    - when is the student cut off from the preparatory year?
+    - when does the student's enrollment from the college or institute fold?
+
+- intent: additional_opportunity_preparatory_year
+  examples: |
+    - "متى يحق للطالب التقدم لفرصة إضافية في السنة التحضيرية؟"
+    - "التقدم لفرصة إضافية في السنة التحضيرية"
+    - when is a student entitled to apply for an additional opportunity in the preparatory year?
+    - applying for an additional opportunity in the preparatory year
+
+- intent: transfer_preparatory_year
+  examples: |
+    - "التحويل من خارج القطاع"
+    - transfer from outside the sector?
+
+######################List of student activities############################
+
+- intent: student_activities_list
+  examples: |
+    - "ما هي لائحة الانشطة الطلابي؟"
+    - "لائحة الانشطة الطلابية"
+    - what is the list of student activities?
+    - list of student activities
+
+- intent: objective_student_activities_list
+  examples: |
+    - "ما هي اهداف لائحة الانشطة الطلابية؟"
+    - "اهداف لائحة الانشطة الطلابية"
+    - what are the objectives of the list of student activities?
+    - objectives of the list of student activities
+
+- intent: student_club_creation
+  examples: |
+    - "ماذا يجب ان تقدم الجهة التي ترغب في انشاء نادي طلابي؟"
+    - "انشاء نادي طلابي"
+    - what should the entity wishing to establish a student club provide?
+    - create a student club
+
+
+- intent: student_club_members
+  examples: |
+    - "ما هو عدد اعضاء النادي الطلابي"
+    - What is the number of student club members?
+    
+- intent: student_club_branches
+  examples: |
+    - "انشاء فروع للنادي الطلابي"
+    - "هل يحق للنادي انشاء فروع؟"
+    - Establishing student club branches
+    - Does the club have the right to establish branches?
+
+
+- intent: club_member_job
+  examples: |
+    - "مم تتكون الاندية الطلابية؟"
+    - "وظائف اعضاء النادي الطلابي"
+    - What are student clubs made of?
+    - Student club member jobs
+
+######################Self-employed students############################
+
+- intent: self_employed_student_commitment
+  examples: |
+    - "بماذا يجب ان يلتزم الطلاب الدارسين على حسابهم الخاص؟"
+    - What should students who study on their own account be committed to?
+
+- intent: self_employed_student_rewards
+  examples: |
+    - "هل تمنح مكافآت لالطلاب الدارسين على حسابهم الخاص؟"
+    - "مكافآت الطلاب الدارسين على حسابهم الخاص"
+    - Are rewards given to students studying on their own?
+    - Bonuses for students studying on their own account
+
+- intent: self_employed_student_fee_reduction
+  examples: |
+    - "هل يستطيع الطالب على حسابه الخاص الحصول على تخفيض الرسوم؟"
+    - "تخفيض رسوم الطلاب الدارسين على حسابهم الخاص"
+    - Can a student on his own account get a fee reduction?
+    - Reducing student fees studying on their own account
+
+- intent: self_employed_student_living_discounts
+  examples: |
+    - "خصومات بنود المعيشة"
+    - Living item discounts
+
+- intent: self_employed_student_fee_include
+  examples: |
+    - "ماذا يشمل الرسم الذي يدفعه الطالب؟"
+    - "هل يستطيع الطالب على حسابه الخاص استخدام خدمات و مرافق الكلية؟"
+    - What does the fee paid by the student include?
+    - Can the student on his own account use the services and facilities of the college?
+
+- intent: self_employed_student_admission_fall
+  examples: |
+    - "متى يسقط حق الطالب في القبول؟"
+    - "ماذا يحصل اذا لم يكن الطالب قادرا على دفع الرسوم؟"
+    - When does the student's right to admission fall?
+    - What happens if the student is not able to pay the fees?
+
+######################Student accommodation############################
+
+- intent: student_housing
+  examples: |
+    - "ما هو السكن الطلابي؟"
+    - What is student housing?
+
+- intent: student_housing_distribution
+  examples: |
+    - "من يقوم بتوزيع الطلاب على السكن؟"
+    - "التوزيع على المباني السكنية "
+    - Who distributes students to housing?
+    - Distribution to residential buildings
+
+- intent: student_housing_eviction
+  examples: |
+    - "متى يتم اخلاء السكن غيابيا؟"
+    - "الى اين يتم ارسال وثائق الطالب؟"
+    - "مفقودات الطالب في السكن"
+    - When is the housing eviction in absentia?
+    - Where are student documents sent?
+    - Missing students in housing
+
+- intent: student_housing_holidays
+  examples: |
+    - "هل يحق للطالب البقاء في السكن خلال العطل؟"
+    - "السكن خلال العطل"
+    - Does the student have the right to stay in the residence during the holidays?
+    - Accommodation during the holidays
+
+- intent: student_housing_forbidden
+  examples: |
+    - "ماذا يحظر على الطالب في السكن؟"
+    - "ما هي المحظورات في السكن؟"
+    - "هل يمكن حمل الأسلحة في السكن؟"
+    - "هل يمكن تعاطي الكحول والمسكرات والمخدرات؟"
+    - "هل يمكن استخدام المباخر والشموع؟"
+    - What is forbidden to the student in the housing?
+    - What are the prohibitions in housing?
+    - Can weapons be carried in the residence?
+    - Is it possible to abuse alcohol, intoxicants and drugs?
+    - Can incense burners and candles be used?
+
+- intent: student_housing_violation
+  examples: |
+    - "الاخلال بالقوانين و الانظمة العامة"
+    - "متى يخالف الطالب؟"
+    - Violation of public laws and regulations
+    - When does a student violate?
+
+- intent: student_housing_exempted
+  examples: |
+    - "هل يعفى الطالب من العقوبة بسبب عدم علمه بلائحة السكن الطلابي؟"
+    - "عدم العلم بالقانون"
+    - Is the student exempted from the penalty because he is not aware of the student housing regulations?
+    - not knowing the law
+
+
+#########

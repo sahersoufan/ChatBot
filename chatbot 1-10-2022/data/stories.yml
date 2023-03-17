@@ -1,0 +1,147 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+# my stories
+
+#######################discipline###########################
+
+- story: discipline
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: subject_discipline_inquiry
+  - action: utter_subject_discipline_inquiry
+  - intent: objective_discipline
+  - action: utter_objective_discipline
+
+#######################Students rights and duties###########################
+
+- story: Students rights and duties
+  steps:
+  - intent: academic_student_rights
+  - action: utter_academic_student_rights
+  - intent: Nacademic_student_rights
+  - action: utter_Nacademic_student_rights
+  - intent: academic_student_duties
+  - action: utter_academic_student_duties
+  - intent: Nacademic_student_duties
+  - action: utter_Nacademic_student_duties
+
+######################Study and tests############################
+- story: Study and tests
+  steps:
+  - intent: student_admission_system
+  - action: utter_student_admission_system
+  - intent: admission_requirements
+  - action: utter_admission_requirements
+  - intent: study_System_exam
+  - action: utter_study_System_exam
+  - intent: major_transfer
+  - action: utter_major_transfer
+  - intent: attention_excuse
+  - action: utter_attention_excuse
+  - intent: academic_warning
+  - action: utter_academic_warning
+
+######################Preparatory year and basic skills year############################
+
+- story: Preparatory year and basic skills year
+  steps:
+  - intent: preparatory_year
+  - action: utter_preparatory_year
+  - intent: choose_academic_programs
+  - action: utter_choose_academic_programs
+  - intent: depriving_student
+  - action: utter_depriving_student
+  - intent: withdraw_first_semester
+  - action: utter_withdraw_first_semester
+  - intent: dismissing_preparatory_year
+  - action: utter_dismissing_preparatory_year
+  - intent: additional_opportunity_preparatory_year
+  - action: utter_additional_opportunity_preparatory_year
+  - intent: transfer_preparatory_year
+  - action: utter_transfer_preparatory_year
+
+######################List of student activities############################
+
+- story: List of student activities
+  steps:
+  - intent: student_activities_list
+  - action: utter_student_activities_list
+  - intent: objective_student_activities_list
+  - action: utter_objective_student_activities_list
+  - intent: student_club_creation
+  - action: utter_student_club_creation
+  - intent: student_club_members
+  - action: utter_student_club_members
+  - intent: student_club_branches
+  - action: utter_student_club_branches
+  - intent: club_member_job
+  - action: utter_club_member_job
+
+######################Self-employed students############################
+
+- story: Self employed students
+  steps:
+  - intent: self_employed_student_commitment
+  - action: utter_self_employed_student_commitment
+  - intent: self_employed_student_rewards
+  - action: utter_self_employed_student_rewards
+  - intent: self_employed_student_fee_reduction
+  - action: utter_self_employed_student_fee_reduction
+  - intent: self_employed_student_living_discounts
+  - action: utter_self_employed_student_living_discounts
+  - intent: self_employed_student_fee_include
+  - action: utter_self_employed_student_fee_include
+  - intent: self_employed_student_admission_fall
+  - action: utter_self_employed_student_admission_fall
+
+######################Student accommodation############################
+
+- story: Student accommodation
+  steps:
+  - intent: student_housing
+  - action: utter_student_housing
+  - intent: student_housing_distribution
+  - action: utter_student_housing_distribution
+  - intent: student_housing_eviction
+  - action: utter_student_housing_eviction
+  - intent: student_housing_holidays
+  - action: utter_student_housing_holidays
+  - intent: student_housing_forbidden
+  - action: utter_student_housing_forbidden
+  - intent: student_housing_violation
+  - action: utter_student_housing_violation
+  - intent: student_housing_exempted 
+  - action: utter_student_housing_exempted 
+
+###############

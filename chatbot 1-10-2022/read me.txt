@@ -1,0 +1,15 @@
+at first download and install rasa by follow their instructions here : https://rasa.com/docs/rasa/2.x/installation/
+and when you install rasa it'll download it's dependencies
+then install langid package : pip install langid
+
+------
+
+rasa commands:
+for train your model: rasa train
+for run your chatbot in terminal : rasa shell
+
+for run your model in interactive mode : rasa interactive
+
+for run your chatbot as an api : rasa run --enable-api --cors "*"
+for run actions server : rasa run actions
+

@@ -1,0 +1,227 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+
+
+# my rules
+
+#######################discipline###########################
+
+- rule: discipline 1
+  steps:
+  - intent: subject_discipline_inquiry
+  - action: utter_subject_discipline_inquiry
+
+- rule: discipline 2
+  steps:
+  - intent: objective_discipline
+  - action: utter_objective_discipline
+
+#######################Students rights and duties###########################
+
+- rule: Students rights and duties 1
+  steps:
+  - intent: academic_student_rights
+  - action: utter_academic_student_rights
+
+- rule: Students rights and duties 2
+  steps:
+  - intent: Nacademic_student_rights
+  - action: utter_Nacademic_student_rights
+
+- rule: Students rights and duties 3
+  steps:
+  - intent: academic_student_duties
+  - action: utter_academic_student_duties
+
+- rule: Students rights and duties 4
+  steps:
+  - intent: Nacademic_student_duties
+  - action: utter_Nacademic_student_duties
+
+######################Study and tests############################
+
+- rule: Study and tests 1
+  steps:
+  - intent: student_admission_system
+  - action: utter_student_admission_system
+
+- rule: Study and tests 2
+  steps:
+  - intent: admission_requirements
+  - action: utter_admission_requirements
+
+- rule: Study and tests 3
+  steps:
+  - intent: study_System_exam
+  - action: utter_study_System_exam
+
+- rule: Study and tests 4
+  steps:
+  - intent: major_transfer
+  - action: utter_major_transfer
+
+- rule: Study and tests 5
+  steps:
+  - intent: attention_excuse
+  - action: utter_attention_excuse
+
+- rule: Study and tests 6
+  steps:
+  - intent: academic_warning
+  - action: utter_academic_warning
+
+######################Preparatory year and basic skills year############################
+
+- rule: Preparatory year and basic skills year 1
+  steps:
+  - intent: preparatory_year
+  - action: utter_preparatory_year
+
+- rule: Preparatory year and basic skills year 2
+  steps:
+  - intent: choose_academic_programs
+  - action: utter_choose_academic_programs
+
+- rule: Preparatory year and basic skills year 3
+  steps:
+  - intent: depriving_student
+  - action: utter_depriving_student
+
+- rule: Preparatory year and basic skills year 4
+  steps:
+  - intent: withdraw_first_semester
+  - action: utter_withdraw_first_semester
+
+- rule: Preparatory year and basic skills year 5
+  steps:
+  - intent: dismissing_preparatory_year
+  - action: utter_dismissing_preparatory_year
+
+- rule: Preparatory year and basic skills year 6
+  steps:
+  - intent: additional_opportunity_preparatory_year
+  - action: utter_additional_opportunity_preparatory_year
+
+- rule: Preparatory year and basic skills year 7
+  steps:
+  - intent: transfer_preparatory_year
+  - action: utter_transfer_preparatory_year
+
+######################List of student activities############################
+
+- rule: List of student activities 1
+  steps:
+  - intent: student_activities_list
+  - action: utter_student_activities_list
+
+- rule: List of student activities 2
+  steps:
+  - intent: objective_student_activities_list
+  - action: utter_objective_student_activities_list
+  
+- rule: List of student activities 3
+  steps:
+  - intent: student_club_creation
+  - action: utter_student_club_creation
+
+- rule: List of student activities 4
+  steps:
+  - intent: student_club_members
+  - action: utter_student_club_members
+
+- rule: List of student activities 5
+  steps:
+  - intent: student_club_branches
+  - action: utter_student_club_branches
+
+- rule: List of student activities 6
+  steps:
+  - intent: club_member_job
+  - action: utter_club_member_job
+
+######################Self-employed students############################
+
+- rule: Self employed students 1
+  steps:
+  - intent: self_employed_student_commitment
+  - action: utter_self_employed_student_commitment
+
+- rule: Self employed students 2
+  steps:
+  - intent: self_employed_student_rewards
+  - action: utter_self_employed_student_rewards
+
+- rule: Self employed students 3
+  steps:
+  - intent: self_employed_student_fee_reduction
+  - action: utter_self_employed_student_fee_reduction
+
+- rule: Self employed students 4
+  steps:
+  - intent: self_employed_student_living_discounts
+  - action: utter_self_employed_student_living_discounts
+
+- rule: Self employed students 5
+  steps:
+  - intent: self_employed_student_fee_include
+  - action: utter_self_employed_student_fee_include
+
+- rule: Self employed students 6
+  steps:
+  - intent: self_employed_student_admission_fall
+  - action: utter_self_employed_student_admission_fall
+
+######################Student accommodation############################
+
+- rule: Student accommodation 1
+  steps:
+  - intent: student_housing
+  - action: utter_student_housing
+
+- rule: Student accommodation 2
+  steps:
+  - intent: student_housing_distribution
+  - action: utter_student_housing_distribution
+
+- rule: Student accommodation 3
+  steps:
+  - intent: student_housing_eviction
+  - action: utter_student_housing_eviction
+
+- rule: Student accommodation 4
+  steps:
+  - intent: student_housing_holidays
+  - action: utter_student_housing_holidays
+
+- rule: Student accommodation 5
+  steps:
+  - intent: student_housing_forbidden
+  - action: utter_student_housing_forbidden
+
+- rule: Student accommodation 6
+  steps:
+  - intent: student_housing_violation
+  - action: utter_student_housing_violation
+
+- rule: Student accommodation 7
+  steps:
+  - intent: student_housing_exempted 
+  - action: utter_student_housing_exempted 
+
+
+
+
+  #########
